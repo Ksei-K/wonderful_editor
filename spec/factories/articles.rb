@@ -19,7 +19,7 @@
 #
 FactoryBot.define do
   factory :article do
-    title { "MyString" }
+    title { Faker::Book.title }
     body { "MyText" }
     user { nil }
   end
