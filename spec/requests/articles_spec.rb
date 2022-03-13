@@ -4,11 +4,11 @@ RSpec.describe "Api::V1::Articles", type: :request do
   describe "GET /articles" do
     subject { get(api_v1_articles_path) }
 
-    let!(:article1) { create(:article) }
-    let!(:article2) { create(:article) }
-    let!(:article3) { create(:article) }
+    let(:article1) { create(:article) }
+    let(:article2) { create(:article) }
+    let(:article3) { create(:article) }
 
-    it "記事の一覧が取得できる" do
+    it "記事一覧を取得できる" do
       subject
       res = JSON.parse(response.body)
 
