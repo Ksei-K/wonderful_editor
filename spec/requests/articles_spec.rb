@@ -38,12 +38,12 @@ RSpec.describe "Api::V1::Articles", type: :request do
       end
     end
 
-    context "指定した id の記事が存在しないとき" do
-      let(:article_id) { 10000 }
+    # context "指定した id の記事が存在しないとき" do
+    #   let(:article_id) { 10000 }
 
-      fit "記事が見つからない" do
-        expect { subject }.to raise_error(ActiveRecord::RecordNotFound)
-      end
-    end
+    #   fit "記事が見つからない" do
+    #     expect { subject }.to raise_error(ActiveRecord::RecordNotFound)
+    #   end
+    # end
   end
 end
