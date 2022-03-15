@@ -7,16 +7,10 @@ inherit_from:
   - config/rubocop/rspec.yml
 
 
-Lint/UselessAssignment:
-  Exclude:
-    - 'spec/**/*'
+
 
 RSpec/LetSetup:
   Exclude:
-
-RSpec/MultipleExpectations:
-  Exclude:
-    - 'spec/**/*'
 
 AllCops:
   TargetRubyVersion: 2.7
