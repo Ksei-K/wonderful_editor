@@ -10,7 +10,7 @@ module Api::V1
     end
 
     # def show
-    #   articles = Article.find(params[:id])
+    #   article = Article.find(params[:id])
 
     #   render json: articles, each_serializer: Api::V1::ArticlePreviewSerializer
     # end
