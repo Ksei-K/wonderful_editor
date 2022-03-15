@@ -14,6 +14,10 @@ RSpec/Focus:
    Exclude:
     - 'spec/**/*'
 
+Layout/IndentationConsistency:
+   Exclude:
+    - 'spec/**/*'
+
 AllCops:
   TargetRubyVersion: 2.7
 

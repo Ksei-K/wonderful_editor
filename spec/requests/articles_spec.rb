@@ -42,9 +42,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
       let(:article_id) { 10000 }
 
       fit "記事が見つからない" do
-binding.pry
         expect { subject }.to raise_error(ActiveRecord::RecordNotFound)
-binding.pry
       end
     end
   end
