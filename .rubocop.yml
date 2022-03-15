@@ -13,7 +13,6 @@ Lint/UselessAssignment:
 
 RSpec/LetSetup:
   Exclude:
-    - 'spec/**/*'
 
 RSpec/MultipleExpectations:
   Exclude:
