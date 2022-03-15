@@ -10,9 +10,5 @@ RSpec/LetSetup:
     Exclude:
     - 'spec/**/*'
 
-RSpec/LetSetup:
-   Exclude:
-    - 'spec/**/*'
-
 AllCops:
   TargetRubyVersion: 2.7
