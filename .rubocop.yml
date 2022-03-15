@@ -7,7 +7,7 @@ inherit_from:
   - config/rubocop/rspec.yml
 
 RSpec/LetSetup:
-  Exclude:
+    Exclude:
     - 'spec/**/*'
 
 AllCops:
