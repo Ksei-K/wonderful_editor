@@ -1,5 +1,6 @@
 module Api::V1
-  class ArticlesController < BaseApiController # base_api_controller を継承
+  # base_api_controller を継承
+  class ArticlesController < BaseApiController
     def index
       # articles = Article.all
 
@@ -9,13 +10,9 @@ module Api::V1
     end
 
     def show
-      article = Article.find(params[:id])
+      articles = Article.find(params[:id])
 
       render json: articles, each_serializer: Api::V1::ArticlePreviewSerializer
     end
-
-
-
-
   end
 end

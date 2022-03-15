@@ -6,5 +6,21 @@ inherit_from:
   - config/rubocop/rails.yml
   - config/rubocop/rspec.yml
 
+# Style/CommentedKeyword:
+#      Exclude:
+#     - 'spec/**/*'
+
+Lint/UselessAssignment:
+  Exclude:
+    - 'spec/**/*'
+
+RSpec/LetSetup:
+  Exclude:
+    - 'spec/**/*'
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/**/*'
+
 AllCops:
   TargetRubyVersion: 2.7
