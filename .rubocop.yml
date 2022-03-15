@@ -12,3 +12,7 @@ RSpec/LetSetup:
 
 AllCops:
   TargetRubyVersion: 2.7
+
+RSpec/MultipleExpectations:
+   Exclude:
+    - 'spec/**/*'
