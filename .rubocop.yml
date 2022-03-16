@@ -18,6 +18,10 @@ Layout/IndentationConsistency:
    Exclude:
     - 'spec/**/*'
 
+RSpec/AnyInstance:
+   Exclude:
+    - 'spec/**/*'
+
 AllCops:
   TargetRubyVersion: 2.7
 
