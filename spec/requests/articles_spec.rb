@@ -82,4 +82,17 @@ RSpec.describe "Api::V1::Articles", type: :request do
       expect(response).to have_http_status(:ok)
     end
   end
+
+  describe "DELETE /articles/:id" do
+    subject { delete(api_v1_article_path(article.id) ) }
+
+    let(:article) { create(:article, user: current_user) }
+    let(:current_user) { create(:user) }
+    before { allow_any_instance_of(Api::V1::BaseApiController).to receive(:current_user).and_return(current_user) }
+
+    fit "記事のレコードを削除できる" do
+      expect { subject }.to change { Article.count }.by(0)
+      expect(response).to have_http_status(:ok)
+    end
+  end
 end
