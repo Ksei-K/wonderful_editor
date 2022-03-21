@@ -65,4 +65,21 @@ RSpec.describe "Api::V1::Articles", type: :request do
       expect(response).to have_http_status(:ok)
     end
   end
+
+  describe "PATCH /articles/:id" do
+    subject { patch(api_v1_article_path(article.id), params: params) }
+
+    let(:params) { { article: attributes_for(:article) } }
+    let(:article) { create(:article, user: current_user) }
+    # current_user をテストのときだけ別の値として参照する
+    let(:current_user) { create(:user) }
+    # stub
+    before { allow_any_instance_of(Api::V1::BaseApiController).to receive(:current_user).and_return(current_user) }
+
+    it "記事のレコードを更新をできる" do
+      expect { subject }.to change { article.reload.title }.from(article.title).to(params[:article][:title]) &
+                            change { article.reload.body }.from(article.body).to(params[:article][:body])
+      expect(response).to have_http_status(:ok)
+    end
+  end
 end
