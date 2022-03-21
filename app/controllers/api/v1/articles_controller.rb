@@ -21,6 +21,14 @@ module Api::V1
       render json: @article, serializer: Api::V1::ArticlePreviewSerializer
     end
 
+    def update
+      article = current_user.articles.find(params[:id])
+
+      article.update!(article_params)
+
+      render json: article, serializer: Api::V1::ArticlePreviewSerializer
+    end
+
     private
 
       def article_params
