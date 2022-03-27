@@ -22,6 +22,10 @@ RSpec/AnyInstance:
    Exclude:
     - 'spec/**/*'
 
+Style/CommentedKeyword:
+   Exclude:
+    - 'spec/**/*'
+
 AllCops:
   TargetRubyVersion: 2.7
 
