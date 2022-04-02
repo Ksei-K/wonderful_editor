@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "Api::V1::Auth::Sessions", type: :request do
   describe "POST /api/v1/auth/sign_in" do
@@ -18,7 +18,6 @@ RSpec.describe "Api::V1::Auth::Sessions", type: :request do
         expect(header["token-type"]).to be_present
         expect(response).to have_http_status(:ok)
       end
-
     end
 
     context "email が一致しないとき" do
@@ -42,7 +41,7 @@ RSpec.describe "Api::V1::Auth::Sessions", type: :request do
       let(:user) { create(:user) }
       let(:params) { attributes_for(:user, email: user.email, password: "unmatch") }
 
-      fit "ログインできない" do
+      it "ログインできない" do
         subject
         res = JSON.parse(response.body)
         header = response.header
@@ -54,6 +53,5 @@ RSpec.describe "Api::V1::Auth::Sessions", type: :request do
         expect(header["token-type"]).to be_blank
       end
     end
-
   end
 end
