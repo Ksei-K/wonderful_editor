@@ -18,6 +18,15 @@ Layout/IndentationConsistency:
    Exclude:
     - 'spec/**/*'
 
+RSpec/ExampleLength:
+   Exclude:
+    - 'spec/**/*'
+
+Lint/UselessAssignment:
+   Exclude:
+    - 'spec/**/*'
+
+
 RSpec/AnyInstance:
    Exclude:
     - 'spec/**/*'
