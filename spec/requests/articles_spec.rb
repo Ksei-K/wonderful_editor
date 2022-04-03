@@ -58,7 +58,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
   end
 
   describe "PATCH /articles/:id" do
-    subject { patch(api_v1_article_path(article.id), params: params,headers: headers) }
+    subject { patch(api_v1_article_path(article.id), params: params, headers: headers) }
 
     let(:params) { { article: attributes_for(:article) } }
     let(:article) { create(:article, user: current_user) }
@@ -67,7 +67,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
     # stub
     let(:headers) { current_user.create_new_auth_token }
 
-    fit "記事のレコードを更新をできる" do
+    it "記事のレコードを更新をできる" do
       expect { subject }.to change { article.reload.title }.from(article.title).to(params[:article][:title]) &
                             change { article.reload.body }.from(article.body).to(params[:article][:body])
       expect(response).to have_http_status(:ok)
@@ -75,13 +75,13 @@ RSpec.describe "Api::V1::Articles", type: :request do
   end
 
   describe "DELETE /articles/:id" do
-    subject { delete(api_v1_article_path(article.id),headers: headers) }
+    subject { delete(api_v1_article_path(article.id), headers: headers) }
 
     let(:article) { create(:article, user: current_user) }
     let(:current_user) { create(:user) }
     let(:headers) { current_user.create_new_auth_token }
 
-    fit "記事のレコードを削除できる" do
+    it "記事のレコードを削除できる" do
       expect { subject }.to change { Article.count }.by(0)
       expect(response).to have_http_status(:ok)
     end
