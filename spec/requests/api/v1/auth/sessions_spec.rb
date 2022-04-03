@@ -72,7 +72,7 @@ RSpec.describe "Api::V1::Auth::Sessions", type: :request do
       let(:user) { create(:user) }
       let!(:headers) { { "access-token" => "", "token-type" => "", "client" => "", "expiry" => "", "uid" => "" } }
 
-      fit "ログアウトできない" do
+      it "ログアウトできない" do
         subject
         res = JSON.parse(response.body)
         expect(response).to have_http_status(:not_found)
