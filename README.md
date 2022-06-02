@@ -10,7 +10,7 @@
 
 ## URL・テストアカウント
 
-- ポートフォリオURL : https://github.com/Ksei-K/wonderful_editor
+- ポートフォリオURL : https://wonderful-editor-f.herokuapp.com/
 - アカウント : geust
 - email : guest@example.com
 - password : guest123
