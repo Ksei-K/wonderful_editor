@@ -11,7 +11,7 @@
 ## URL・テストアカウント
 
 - ポートフォリオURL : https://wonderful-editor-f.herokuapp.com/
-- アカウント : geust
+- アカウント : ゲスト
 - email : guest@example.com
 - password : guest123
 
