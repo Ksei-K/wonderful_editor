@@ -3,7 +3,8 @@
 ### タイトル
 ## 「wonderful_editor」
 『Qiita風記事作成アプリ』 
-<img width="1253" alt="スクリーンショット 2022-05-09 19 30 39" src="https://user-images.githubusercontent.com/94003691/167786245-927a0f05-cb3a-4d38-b159-121fe9508848.png">
+<img width="1164" alt="スクリーンショット 2022-06-02 8 48 32" src="https://user-images.githubusercontent.com/94003691/173318239-0c61445c-e78a-4cea-b4ef-5d515434295a.png">
+
 
 ## 概要
 記事を作成し、共有するアプリ
